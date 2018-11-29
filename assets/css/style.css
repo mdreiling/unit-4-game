@@ -27,3 +27,16 @@ p {
     background-color: aqua;
     color: orange;
 }
+
+.container {
+    background-color: lightblue;
+}
+
+.row {
+    background-color: blue;
+}
+
+.scoreBoardTile {
+    margin: 10px;
+    background-color: white;
+}

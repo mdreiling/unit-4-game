@@ -26,9 +26,11 @@ $(document).ready(function(){
         // Runs targetSelection and gemSelection functions.
         targetSelection();
         gemSelector();
-        $("#wins-text").text("Wins: " + wins);
-        $("#losses-text").text("Losses: " +losses);
-        
+        $("#wins-text").text(wins);
+        $("#losses-text").text(losses);    
+        $("#userTotal-text").text(0);
+        $("#gameState-text").text("Click a gem to get started!");
+
     };
 
     // Defining a targetSelection Function - Selects target number that user is trying to match.
@@ -37,7 +39,7 @@ $(document).ready(function(){
         // Selects target number
         targetNumber = Math.floor(Math.random() * 101) + 19;
         console.log("Target Number: " + targetNumber);
-        $("#targetNumber-text").text("Your Target Number: " + targetNumber);
+        $("#targetNumber-text").text(targetNumber);
 
     };
 
@@ -72,17 +74,19 @@ $(document).ready(function(){
         gemValue = parseInt(gemValue);
         userTotal += gemValue;
         console.log("New Total: " + userTotal);
-        $("#userTotal-text").text("Your Total: " + userTotal);
+        $("#userTotal-text").text(userTotal);
 
         if (userTotal === targetNumber) {
             console.log("You Win!");
             wins += 1;
             gameReset();
+            $("#gameState-text").text("You Won! Click a gem to play again!")
 
-        } else if ( userTotal >= targetNumber) {
+        } else if ( userTotal > targetNumber) {
             console.log("You Lose!");
             losses += 1;
             gameReset();
+            $("#gameState-text").text("You Lost. Click a gem to play again!")
 
         } else {
             $("#gameState-text").text("Keep Going!")
@@ -90,12 +94,6 @@ $(document).ready(function(){
         }
 
     });
-
-    // Setting Text Values
-    $("#userTotal-text").text("Your Total: " + 0);
-    $("#gameState-text").text("Click a gem to get started!");
-    $("#wins-text").text("Wins: " + wins);
-    $("#losses-text").text("Losses: " +losses);
 
     // Starting Game
     gameReset();
