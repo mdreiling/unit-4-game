@@ -5,11 +5,30 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <title>Gem Guessing Game</title>
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link rel="stylesheet" type="text/css" media="screen" href="/assets/css/reset.css" />
-    <link rel="stylesheet" type="text/css" media="screen" href="/assets/css/style.css" />
+    <link rel="stylesheet" type="text/css" media="screen" href="assets/css/reset.css"/>
+    <link rel="stylesheet" type="text/css" media="screen" href="assets/css/style.css" />
 </head>
 <body>
-    
+
+    <h1>Gem Guessing Game</h1>
+
+    <p id="targetNumber-text">Target Number: -</p>
+    <p id="userTotal-text">Your total: -</p>
+    <p id="gameState-text">Click a gem to get started!</p>
+    <p id="wins-text">Wins: 0</p>
+    <p id="losses-text">Losses: 0</p>
+
+    <div class="gemsImagesRow">
+        <p class="gemsToClick" id="gemZero">Gem One</p>
+        <p class="gemsToClick" id="gemOne">Gem Two</p>
+        <p class="gemsToClick" id="gemTwo">Gem Three</p>
+        <p class="gemsToClick" id="gemThree">Gem Four</p>
+    </div>
+
 </body>
-<script src="game.js"></script>
+
+<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+
+<script type="text/javascript" src="assets/javascript/game.js"></script>
+
 </html>
