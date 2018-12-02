@@ -20,19 +20,19 @@
         <div class="row" id="scoreBoard">
 
             <div class="col-lg scoreBoardTile">
-                <p>Wins:</p>
-                <p id="wins-text"></p>
+                <h2>Wins:</h2>
+                <h3 id="wins-text"></h3>
 
             </div>
 
             <div class="col-lg scoreBoardTile">
-                    <p id="gameState-text"></p>
+                    <h3 id="gameState-text"></h3>
 
             </div>
 
             <div class="col-lg scoreBoardTile">
-                <p>Losses:</p>
-                <p id="losses-text"></p>
+                <h2>Losses:</h2>
+                <h3 id="losses-text"></h3>
 
             </div>
 
@@ -40,29 +40,30 @@
 
         <div class="container" id="gameArea">
 
-            <div class="row" id="targetNumber">
+            <div class="container computerGameArea">
+                <div class="row numberHeader" id="targetNumber">
 
-                <div class="col-9 tNumberTitle">Your Target Number: </div>
-                <div class="col-3 tNumberNumber" id="targetNumber-text"></div>
-            
+                    <div class="col-9 numberTitle">Your Target Number: </div>
+                    <div class="col-3 numberNumber" id="targetNumber-text"></div>
+                    
+                </div>
             </div>
 
-
             <div class="container" id="userGameArea">
-                <div class="row" id="userNumber">
+                <div class="row numberHeader" id="userNumber">
 
-                    <div class="col-9 uNumberTitle">Your Total: </div>
-                    <div class="col-3 uNumberNumber" id="userTotal-text"></div>
+                    <div class="col-9 numberTitle">Your Total: </div>
+                    <div class="col-3 numberNumber" id="userTotal-text"></div>
                 
                 </div>
 
-                <div class="gemsImagesRow">
+                <div class="row gemsImagesRow">
 
-                    <p class="gemsToClick" id="gemZero">Gem One</p>
-                    <p class="gemsToClick" id="gemOne">Gem Two</p>
-                    <p class="gemsToClick" id="gemTwo">Gem Three</p>
-                    <p class="gemsToClick" id="gemThree">Gem Four</p>
-                    
+                    <img class="col-3 gemsToClick" id="gemZero" src="assets/images/Gem_Red.png">
+                    <img class="col-3 gemsToClick" id="gemOne" src="assets/images/Gem_Blue.png">
+                    <img class="col-3 gemsToClick" id="gemTwo" src="assets/images/Gem_Green.png">
+                    <img class="col-3 gemsToClick" id="gemThree" src="assets/images/Gem_Purple.png">
+
                 </div>
             </div>
         </div>

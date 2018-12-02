@@ -2,8 +2,6 @@
 var targetNumber = 0;
 var gemNumbers = [];
 var userTotal = 0;
-var userSelection = [];
-var gameContinue = true;
 var wins = 0;
 var losses = 0;
     
@@ -16,14 +14,12 @@ $(document).ready(function(){
         // Resets game variables
         targetNumber = 0;
         userTotal = 0;
-        userSelection = [];
-        gameContinue = true;
         gemNumbers = [];
 
         // Empties gem and user values
         $(".gemsToClick, #userTotal-text, #userSelection").empty();
 
-        // Runs targetSelection and gemSelection functions.
+        // Runs targetSelection, gemSelection functions, and updates wins, losses, userTotal, gameState.
         targetSelection();
         gemSelector();
         $("#wins-text").text(wins);
@@ -80,16 +76,16 @@ $(document).ready(function(){
             console.log("You Win!");
             wins += 1;
             gameReset();
-            $("#gameState-text").text("You Won! Click a gem to play again!")
+            $("#gameState-text").html("<b>You Won!</b> Click a gem to play again!");
 
         } else if ( userTotal > targetNumber) {
             console.log("You Lose!");
             losses += 1;
             gameReset();
-            $("#gameState-text").text("You Lost. Click a gem to play again!")
+            $("#gameState-text").html("<b>You Lost.</b> Click a gem to play again!");
 
         } else {
-            $("#gameState-text").text("Keep Going!")
+            $("#gameState-text").html("Keep Going!");
 
         }
 

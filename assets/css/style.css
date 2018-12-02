@@ -1,15 +1,7 @@
-body {
-    background-color: red;
-}
-
 h1 {
     font-size: 250%;
     font-weight: bolder;
-}
-
-p {
-    margin: 5px;
-    color: purple;
+    text-align: center;
 }
 
 .gemsImagesRow::after {
@@ -19,24 +11,39 @@ p {
 }
 
 .gemsToClick {
-    float: left;
-    margin-left: 10px;
-    height: 150px;
-    width: 150px;
-    border: 10px dashed silver ;
-    background-color: aqua;
-    color: orange;
+    height: 100%;
+
 }
 
-.container {
-    background-color: lightblue;
-}
-
-.row {
-    background-color: blue;
+#gameBoard {
+    background-color: aquamarine;
+    padding: 20px;
 }
 
 .scoreBoardTile {
     margin: 10px;
+    background-color: white;
+    padding: 10px;
+}
+
+.numberTitle {
+    padding-right: 5px;
+    font-weight: bold;
+    text-align: right;
+}
+
+.numberHeader {
+    margin: 5px;
+    margin-top: 10px;
+    background-color: cornflowerblue;
+    border: 1px solid black;
+}
+
+.numberNumber {
+    padding: 2px;
+    background-color: white;
+}
+
+#userGameArea {
     background-color: white;
 }
